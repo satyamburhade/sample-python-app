@@ -5,7 +5,7 @@ USER root
 
 # Copy the src
 RUN mkdir /tmp/src
-ADD src/ /tmp/src/
+ADD / /tmp/src/
 RUN ls /tmp/src/
 # Install python dependencies
 RUN python3 --version
@@ -15,6 +15,6 @@ RUN pip3 install --upgrade pip
 #RUN pip3 list --format=columns
 
 RUN /usr/libexec/s2i/assemble
-RUN chown -R 1001:0 ${APP_ROOT} && fix-permissions ${APP_ROOT} -P
-USER 1001
-CMD /usr/libexec/s2i/run
+#RUN chown -R 1001:0 ${APP_ROOT} && fix-permissions ${APP_ROOT} -P
+#USER 1001
+#CMD /usr/libexec/s2i/run
