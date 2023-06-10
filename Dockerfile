@@ -5,7 +5,7 @@ USER root
 
 # Copy the src
 RUN mkdir /tmp/src
-ADD / /tmp/src/
+ADD src/ /tmp/src/
 RUN ls /tmp/src/
 # Install python dependencies
 RUN python3 --version
